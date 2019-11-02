@@ -34,12 +34,14 @@ rem Environment Variables Initialization of the Script
 
 SetLocal EnableExtensions EnableDelayedExpansion
 
-set curdirforurl=%CD%
+set curdirforurl=%~dp0
+echo Current Directory = %curdirforurl%
+cd "%curdirforurl%"
 
 rem The name of file 
 set Distributive=Packet
 rem a Local Directory
-set LocalFolder=%curdirforurl%\Distrib
+set LocalFolder=%curdirforurl%Distrib
 
 rem Clean an Old Distributive at Directory 'Distrib' or
 rem Make Attempt to Create it if File not Found
@@ -54,7 +56,7 @@ rem Read the Settings from a File 'installmaindistrib.tmp.ini Which Placed
 rem at the Same Directory that bat File. If It was not Able to Parse the Settings -
 rem Exit with None Null Return Code.
 
-call :read_settings .\installmaindistrib.tmp.ini || exit /b 1
+call :read_settings ".\installmaindistrib.tmp.ini" || exit /b 1
 
 rem Environments Variable Settings for Wget Command
 
@@ -122,6 +124,9 @@ if not exist %SETTINGSFILE% (
     echo FAIL: The File with Settings is Absent
     exit /b 1
 )
+
+rem Обрезаем первый и последний символ у переменной %SETTINGSFILE% (кавычки)
+set SETTINGSFILE=%SETTINGSFILE:~1,-1%
 
 rem Processing the Settings File
 rem Here:

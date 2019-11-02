@@ -18,7 +18,9 @@ $RECYCLE.BIN/
 # Auxiliary Files
 *.obj
 *.wixobj
+*.wixpdb
 *.tmp
+*.log
 *.tmp.bat
 *.tmp.ini
 *.tmp.cmd

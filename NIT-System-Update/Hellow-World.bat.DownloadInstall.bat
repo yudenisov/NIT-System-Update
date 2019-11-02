@@ -23,7 +23,7 @@ rem Он может также быть частью дистрибутива кумулятивного обновления.
 REM PARAMETERS: NO
 REM
 REM FUNCTIONS RETURN:
-REM * 0 IF SECCESS
+REM * 0 IF SUCCESS
 REM * 1 IF ERROR OCCUR
 REM
 REM DEPENDENCES:

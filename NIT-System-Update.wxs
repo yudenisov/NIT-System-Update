@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Product Id="BF3A29BE-2BB8-4437-B31B-F6517C50A79F" Name="NIT-System-Update" Language="1033" Version="0.0.1.0" Manufacturer="WixEdit" UpgradeCode="966E54BB-CDAB-451C-9E70-D2020ABA1784">
+        <Package Description="Test file in a Product" Comments="Simple test" InstallerVersion="200" Compressed="yes" />
+        <Media Id="1" Cabinet="simple.cab" EmbedCab="yes" />
+        <WixVariable Id="WixUILicenseRtf" Value="license.rtf" />
+        <Directory Id="TARGETDIR" Name="SourceDir">
+            <Directory Id="ProgramFilesFolder" Name="PFiles">
+                <Directory Id="NIT_SYSTEM_UPDATE" Name="NIT-System-Update">
+                    <Component Id="DESCRIPT.ION" DiskId="1" Guid="AC1C7139-B652-426B-ADC1-57819626B5B8">
+                        <File Id="DESCRIPT.ION" Name="descript.ion" Source="D:\yuden\Documents\GitHub\NIT-System-Update\NIT-System-Update\descript.ion" />
+                    </Component>
+                    <Component Id="HELLOW_WORLD.BAT.DOWNLOADINSTALL.BAT" DiskId="1" Guid="C0A2F055-998A-4E92-BF91-8A8210C1F30A">
+                        <File Id="HELLOW_WORLD.BAT.DOWNLOADINSTALL.BAT" Name="Hellow-World.bat.DownloadInstall.bat" Source="D:\yuden\Documents\GitHub\NIT-System-Update\NIT-System-Update\Hellow-World.bat.DownloadInstall.bat" />
+                    </Component>
+                    <Component Id="INSTALLMAINDISTRIB.TMP.INI" DiskId="1" Guid="6A368884-316E-4027-9A79-FAB58080A5CA">
+                        <File Id="INSTALLMAINDISTRIB.TMP.INI" Name="installmaindistrib.tmp.ini" Source="D:\yuden\Documents\GitHub\NIT-System-Update\NIT-System-Update\installmaindistrib.tmp.ini" />
+                    </Component>
+                    <Component Id="UPDATE_WINDOWS.BAT" DiskId="1" Guid="0A6D5DEB-1276-42CB-B803-E11097750A76">
+                        <File Id="UPDATE_WINDOWS.BAT" Name="Update-Windows.bat" Source="NIT-System-Update\Update-Windows.bat" />
+                    </Component>
+                    <Component Id="UPDATE_WINDOWS.VBS" DiskId="1" Guid="4000490D-56C8-4008-AF92-7B3AD89D7D9A">
+                        <File Id="UPDATE_WINDOWS.VBS" Name="Update-Windows.vbs" Source="D:\yuden\Documents\GitHub\NIT-System-Update\NIT-System-Update\Update-Windows.vbs" />
+                    </Component>
+                    <Component Id="WGET.EXE" DiskId="1" Guid="369D8D64-9247-44D1-9005-A6606A578EAD">
+                        <File Id="WGET.EXE" Name="wget.exe" Source="D:\yuden\Documents\GitHub\NIT-System-Update\NIT-System-Update\wget.exe" />
+                    </Component>
+                </Directory>
+            </Directory>
+        </Directory>
+        <Feature Id="DefaultFeature" Title="Main Feature" Level="1">
+            <ComponentRef Id="DESCRIPT.ION" />
+            <ComponentRef Id="HELLOW_WORLD.BAT.DOWNLOADINSTALL.BAT" />
+            <ComponentRef Id="INSTALLMAINDISTRIB.TMP.INI" />
+            <ComponentRef Id="UPDATE_WINDOWS.BAT" />
+            <ComponentRef Id="UPDATE_WINDOWS.VBS" />
+            <ComponentRef Id="WGET.EXE" />
+        </Feature>
+        <UI />
+        <UIRef Id="WixUI_Minimal" />
+        <Binary Id="UpdateWindowsId" SourceFile="NIT-System-Update\Update-Windows.vbs" />
+        <CustomAction Id="UpdateWindows" BinaryKey="UpdateWindowsId" Execute="deferred" HideTarget="no" Impersonate="no" Return="check" VBScriptCall="" />
+        <InstallExecuteSequence>
+            <Custom Action="UpdateWindows" Before="InstallFinalize" />
+        </InstallExecuteSequence>
+    </Product>
+</Wix>
