@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
     <Product Id="BF3A29BE-2BB8-4437-B31B-F6517C50A79F" Name="NIT-System-Update" Language="1033" Version="0.0.1.0" Manufacturer="New Internet Technologies Inc." UpgradeCode="966E54BB-CDAB-451C-9E70-D2020ABA1784">
-        <Package Description="NIT System Update Lite" Comments="NIT System Update Lite" InstallerVersion="200" Compressed="yes" />
+        <Package Description="Test file in a Product" Comments="Simple test" InstallerVersion="200" Compressed="yes" />
         <Media Id="1" Cabinet="simple.cab" EmbedCab="yes" />
         <WixVariable Id="WixUILicenseRtf" Value="license.rtf" />
         <Directory Id="TARGETDIR" Name="SourceDir">
@@ -173,6 +173,12 @@
             <ComponentRef Id="WIN7ANDW2K8R2_KB3191566_X64.BAT" />
         </Feature>
         <UI />
+        <UIRef Id="WixUI_Minimal" />
+        <Binary Id="UpdateWindowsId" SourceFile="NIT-System-Update\Update-Windows.vbs" />
+        <CustomAction Id="UpdateWindows" BinaryKey="UpdateWindowsId" Execute="deferred" HideTarget="no" Impersonate="no" Return="check" VBScriptCall="" />
+        <InstallExecuteSequence>
+            <Custom Action="UpdateWindows" Before="InstallFinalize" />
+        </InstallExecuteSequence>
         <UIRef Id="WixUI_Minimal" />
     </Product>
 </Wix>

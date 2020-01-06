@@ -1,7 +1,1 @@
-WHAT NEWS
-===========
-
-## Version 0.0.1 alpha
-
-- Create the Documentation Files
-- Create a Directory DRAFT with Temporary Decisions
+﻿WHAT NEWS===========## Version 0.0.2.0 alpha- Some minor Changes## Version 0.0.1 alpha- Create the Documentation Files- Create a Directory DRAFT with Temporary Decisions

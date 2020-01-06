@@ -1,13 +1,13 @@
 REM ***************************************************************************
 REM
-REM Hellow-World.bat DISTRIBUTIVE Download and Install
+REM Windows6.1-KB2882822-x86.msu DISTRIBUTIVE Download and Install
 REM
 REM USAGE:
-REM 	Hellow-World.bat.DownloadInstall.bat
+REM 	Windows6.1-KB2882822-x86.bat
 REM
 REM ***************************************************************************
 @echo off
-rem Данный скрипт скачивает дистрибутив 'Hellow-World.bat' с сайта, описание которого 
+rem Данный скрипт скачивает дистрибутив 'Windows6.1-KB2882822-x86.msu' с сайта, описание которого 
 rem находится в файле installmaindistrib.tmp.ini, в каталог .\Distrib 
 rem (если его нет, он создаёт его) и устанавливает из него дистрибутив
 rem (или просто выполняет файл). При этом делаются все проверки.
@@ -23,7 +23,7 @@ rem Он может также быть частью дистрибутива кумулятивного обновления.
 REM PARAMETERS: NO
 REM
 REM FUNCTIONS RETURN:
-REM * 0 IF SUCCESS
+REM * 0 IF SECCESS
 REM * 1 IF ERROR OCCUR
 REM
 REM DEPENDENCES:
@@ -39,14 +39,14 @@ echo Current Directory = %curdirforurl%
 cd "%curdirforurl%"
 
 rem The name of file 
-set Distributive=Hellow-World.bat
+set Distributive=Windows6.1-KB2882822-x86.msu
 rem a Local Directory
 set LocalFolder=%curdirforurl%Distrib
 
 rem Clean an Old Distributive at Directory 'Distrib' or
 rem Make Attempt to Create it if File not Found
 if exist "%LocalFolder%\%Distributive%" (
-    echo The File Hellow-World.bat is Present. Deleting It
+    echo The File Windows6.1-KB2882822-x86.msu is Present. Deleting It
     del /F /Q "%LocalFolder%\%Distributive%"
 )
 mkdir "%LocalFolder%"
@@ -91,15 +91,15 @@ rem !!! Changed Value! Check before Using !!!
 
 rem Installation the %Distributive%
 
-rem Check Presence of Hellow-World.bat
+rem Check Presence of Windows6.1-KB2882822-x86.msu
 if not exist "%LocalFolder%\%Distributive%" goto pass_Program
 
-rem Uninstall Hellow-World.bat !!! CHANGED VALUE !!!
-rem echo "Uninstall Pecket..."
-rem %SystemRoot%\System32\WBEM\wmic.exe product where name="Hellow-World.bat Name" call uninstall
-rem Install Hellow-World.bat !!! CHANGED VALUE !!!
-echo "Install Hellow-World.bat..."
-call "%LocalFolder%\%Distributive%"
+rem Uninstall Windows6.1-KB2882822-x86.msu !!! CHANGED VALUE !!!
+rem echo "Uninstall Windows6.1-KB2882822-x86.msu..."
+rem %SystemRoot%\System32\WBEM\wmic.exe product where name="Windows6.1-KB2882822-x86.msu Name" call uninstall
+rem Install Windows6.1-KB2882822-x86.msu !!! CHANGED VALUE !!!
+echo "Install Windows6.1-KB2882822-x86.msu..."
+wusa.exe "%LocalFolder%\%Distributive%" /quiet /norestart
 :pass_Program
 
 rem Change Directory
