@@ -21,9 +21,6 @@ $RECYCLE.BIN/
 *.wixpdb
 *.tmp
 *.log
-*.tmp.bat
-*.tmp.ini
-*.tmp.cmd
 *.bak
 
 # Windows Installer files
