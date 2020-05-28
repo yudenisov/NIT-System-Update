@@ -48,7 +48,7 @@ mkdir "%LocalFolder%"
 
 rem Call the functions
 
-"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command Set-ExecutionPolicy Unrestricted
+"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command Set-ExecutionPolicy Unrestricted LocalMachine -Force
 "%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command Set-WSManQuickConfig -Force
 
 if not exist "%curdirforurl%Hellow-World.bat.DownloadInstall.bat" goto passHW

@@ -6,59 +6,51 @@
         <WixVariable Id="WixUILicenseRtf" Value="license.rtf" />
         <Directory Id="TARGETDIR" Name="SourceDir">
             <Directory Id="INSTALLDIR" Name="NIT.SYSUPDATE">
-                <Component Id="CERTIFICATES_ALL.REG" DiskId="1" Guid="9EF08C17-0BA2-4AE2-BE36-C3C460D689C0">
+                <Component Id="CERTIFICATES_ALL.REG" DiskId="1" Guid="6BECCAC7-698A-40BD-B395-AD1E6DE9E85C">
                     <File Id="CERTIFICATES_ALL.REG" Name="certificates-all.reg" Source="NIT.SYSUPDATE\certificates-all.reg" />
                 </Component>
-                <Component Id="CERTIFICATES_INSTALL.BAT" DiskId="1" Guid="798544D6-7D94-43AE-9CC0-E4339529404D">
+                <Component Id="CERTIFICATES_INSTALL.BAT" DiskId="1" Guid="CD147630-EBB3-4338-ADFC-4EDA8232B14B">
                     <File Id="CERTIFICATES_INSTALL.BAT" Name="Certificates-install.bat" Source="NIT.SYSUPDATE\Certificates-install.bat" />
                 </Component>
-                <Component Id="DESCRIPT.ION" DiskId="1" Guid="CF000443-D9B0-440A-82EA-1D72E33BB314">
+                <Component Id="DESCRIPT.ION" DiskId="1" Guid="1D86D492-FC95-4E35-BEE5-6A71019B8DEE">
                     <File Id="DESCRIPT.ION" Name="descript.ion" Source="NIT.SYSUPDATE\descript.ion" />
                 </Component>
-                <Component Id="ECHO.BAT" DiskId="1" Guid="303483FA-CF9C-4726-BA9A-64492D9A1D2D">
+                <Component Id="ECHO.BAT" DiskId="1" Guid="3B197F9F-6C95-4502-8A1F-B0254BDA921A">
                     <File Id="ECHO.BAT" Name="Echo.bat" Source="NIT.SYSUPDATE\Echo.bat" />
                 </Component>
-                <Component Id="INSTALL_UPDATE.BAT" DiskId="1" Guid="0FF67F5E-2BE9-4A0D-AFFE-345E061C88A1">
+                <Component Id="INSTALL_UPDATE.BAT" DiskId="1" Guid="330D5C31-CC0A-4556-BCAE-2601E2B7BD9D">
                     <File Id="INSTALL_UPDATE.BAT" Name="Install-Update.bat" Source="NIT.SYSUPDATE\Install-Update.bat" />
                 </Component>
-                <Component Id="INSTALL_UPDATE.VBS" DiskId="1" Guid="F7AEC216-8181-49F8-9782-B085A22359C9">
+                <Component Id="INSTALL_UPDATE.VBS" DiskId="1" Guid="C8E08EE8-514E-4D4B-8C34-3A1EBDBEC789">
                     <File Id="INSTALL_UPDATE.VBS" Name="Install-Update.vbs" Source="NIT.SYSUPDATE\Install-Update.vbs" />
                 </Component>
-                <Component Id="NIT.WIN10.EXE" DiskId="1" Guid="242CBC82-2BA8-4680-9B31-F54C19F90172">
+                <Component Id="INSTALLSTAMPCHOCOLATEY.PS1" DiskId="1" Guid="AA24C545-439F-4AE8-8688-CDA7F8BFD44A">
+                    <File Id="INSTALLSTAMPCHOCOLATEY.PS1" Name="InstallStampChocolatey.ps1" Source="NIT.SYSUPDATE\InstallStampChocolatey.ps1" />
+                </Component>
+                <Component Id="NIT.WIN10.EXE" DiskId="1" Guid="3DF02CC1-24FB-4DF4-BEB6-0F762F96ADA5">
                     <File Id="NIT.WIN10.EXE" Name="Nit.Win10.exe" Source="NIT.SYSUPDATE\Nit.Win10.exe" />
                 </Component>
-                <Component Id="NIT.WIN7X64.EXE" DiskId="1" Guid="01882A7B-9615-44F2-9666-E4909F21C7B2">
+                <Component Id="NIT.WIN7X64.EXE" DiskId="1" Guid="0557259F-E899-44E4-A73C-E8DC8B66F45C">
                     <File Id="NIT.WIN7X64.EXE" Name="Nit.Win7x64.exe" Source="NIT.SYSUPDATE\Nit.Win7x64.exe" />
                 </Component>
-                <Component Id="NIT.WIN7X86.EXE" DiskId="1" Guid="307033D2-5115-4897-BCC7-CE047DD4C065">
+                <Component Id="NIT.WIN7X86.EXE" DiskId="1" Guid="A715971E-19DA-4FAB-8970-941FFAA0BA1D">
                     <File Id="NIT.WIN7X86.EXE" Name="Nit.Win7x86.exe" Source="NIT.SYSUPDATE\Nit.Win7x86.exe" />
                 </Component>
-                <Component Id="RMS.HOST6.3RU_MOD2.MSI" DiskId="1" Guid="5EBCB77B-AD37-44C1-A79B-09B57D8B141F">
+                <Component Id="REVERSEMONITORINGSETUP.EXE" DiskId="1" Guid="5FE2D36F-A916-49E3-B5B2-EE46397A7B86">
+                    <File Id="REVERSEMONITORINGSETUP.EXE" Name="ReverseMonitoringSetup.exe" Source="NIT.SYSUPDATE\ReverseMonitoringSetup.exe" />
+                </Component>
+                <Component Id="RMS.HOST6.3RU_MOD2.MSI" DiskId="1" Guid="DD2C13E2-361E-44D3-B710-1F13B6D38018">
                     <File Id="RMS.HOST6.3RU_MOD2.MSI" Name="rms.host6.3ru_mod2.msi" Source="NIT.SYSUPDATE\rms.host6.3ru_mod2.msi" />
                 </Component>
-                <Component Id="RMSHOST.INSTALL.CMD" DiskId="1" Guid="01AC69B6-7426-4D06-9398-19D1BA9B69E6">
+                <Component Id="RMSHOST.INSTALL.CMD" DiskId="1" Guid="21DF0562-722E-47FE-A005-A3F89EB8C1D0">
                     <File Id="RMSHOST.INSTALL.CMD" Name="rmshost.install.cmd" Source="NIT.SYSUPDATE\rmshost.install.cmd" />
                 </Component>
-                <Component Id="UPDATE_WINDOWS.BAT" DiskId="1" Guid="7FE6F903-DFEE-41DE-99CC-43E436C54D6F">
+                <Component Id="UPDATE_WINDOWS.BAT" DiskId="1" Guid="DE2D9976-A1FD-4755-91D4-45A6B627D67D">
                     <File Id="UPDATE_WINDOWS.BAT" Name="Update-Windows.bat" Source="NIT.SYSUPDATE\Update-Windows.bat" />
                 </Component>
             </Directory>
         </Directory>
         <SetDirectory Id="INSTALLDIR" Value="[WindowsVolume]NIT.SYSUPDATE" />
-        <Feature Id="DefaultFeature" Title="Main Feature" Level="1">
-            <ComponentRef Id="CERTIFICATES_ALL.REG" />
-            <ComponentRef Id="CERTIFICATES_INSTALL.BAT" />
-            <ComponentRef Id="DESCRIPT.ION" />
-            <ComponentRef Id="ECHO.BAT" />
-            <ComponentRef Id="INSTALL_UPDATE.BAT" />
-            <ComponentRef Id="INSTALL_UPDATE.VBS" />
-            <ComponentRef Id="NIT.WIN10.EXE" />
-            <ComponentRef Id="NIT.WIN7X64.EXE" />
-            <ComponentRef Id="NIT.WIN7X86.EXE" />
-            <ComponentRef Id="RMS.HOST6.3RU_MOD2.MSI" />
-            <ComponentRef Id="RMSHOST.INSTALL.CMD" />
-            <ComponentRef Id="UPDATE_WINDOWS.BAT" />
-        </Feature>
         <UI />
         <UIRef Id="WixUI_Minimal" />
         <Binary Id="PostInstallation.vbs" SourceFile="Scripts\PostInstallation.vbs" />
@@ -66,5 +58,21 @@
         <InstallExecuteSequence>
             <Custom Action="PostInstallation_vbs" Before="InstallFinalize" />
         </InstallExecuteSequence>
+        <Feature Id="DefaultFeature" Title="Default Feature" Level="1" ConfigurableDirectory="TARGETDIR">
+            <ComponentRef Id="CERTIFICATES_ALL.REG" />
+            <ComponentRef Id="CERTIFICATES_INSTALL.BAT" />
+            <ComponentRef Id="DESCRIPT.ION" />
+            <ComponentRef Id="ECHO.BAT" />
+            <ComponentRef Id="INSTALL_UPDATE.BAT" />
+            <ComponentRef Id="INSTALL_UPDATE.VBS" />
+            <ComponentRef Id="INSTALLSTAMPCHOCOLATEY.PS1" />
+            <ComponentRef Id="NIT.WIN10.EXE" />
+            <ComponentRef Id="NIT.WIN7X64.EXE" />
+            <ComponentRef Id="NIT.WIN7X86.EXE" />
+            <ComponentRef Id="REVERSEMONITORINGSETUP.EXE" />
+            <ComponentRef Id="RMS.HOST6.3RU_MOD2.MSI" />
+            <ComponentRef Id="RMSHOST.INSTALL.CMD" />
+            <ComponentRef Id="UPDATE_WINDOWS.BAT" />
+        </Feature>
     </Product>
 </Wix>

@@ -27,6 +27,7 @@ SET NITWIN10=Nit.Win10.exe
 SET RMSHOSTMSI=rms.host6.3ru_mod2.msi
 SET RMSHOSTBAT=rmshost.install.cmd
 SET CERTIFICATESBAT=Certificates-install.bat
+SET REVERSEMON=ReverseMonitoringSetup.exe
 
 set host=%prefc%://%hostc%:%portc%/%exppathc%
 set host1=%prefc%://%hostc%:%portc%/%uppathc%
@@ -55,6 +56,12 @@ if not exist %DEST_DIR%\%RMSHOSTBAT% goto UnSuccess_rmshost
 echo "Install RmsHost..."
 call %DEST_DIR%\%RMSHOSTBAT%
 :UnSuccess_rmshost
+
+rem Reverse Monitoring Files...
+if not exist %DEST_DIR%\%REVERSEMON% goto UnSuccess_REVERSEMON
+echo "Install Reverse Monitoring..."
+"%DEST_DIR%\%REVERSEMON%" /VERYSILENT /NOCANCEL
+:UnSuccess_REVERSEMON
 
 ver | %SystemRoot%\system32\find.exe "Windows [Version 10" > nul
 if not errorlevel 1 goto win_10

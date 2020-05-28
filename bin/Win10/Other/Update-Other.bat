@@ -49,11 +49,21 @@ mkdir "%LocalFolder%"
 
 rem Call the functions
 
-rem **** TLS x64 Install / ****
+rem **** Choco Install / ****
 
 if not exist "%curdirforurl%chock.install.cmd" goto passChoco
 call "%curdirforurl%chock.install.cmd" || exit /b 1
 :passChoco
+
+rem Run Internet Explorer For First Use...
+"C:\Program Files\Internet Explorer\iexplore.exe"
+
+rem **** Time Stamp Choco ****
+
+if not exist "c:\NIT.SYSUPDATE\InstallStampChocolatey.ps1" goto passChocoStamp
+"C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe" "c:\NIT.SYSUPDATE\InstallStampChocolatey.ps1" || exit /b 1
+:passChocoStamp
+
 
 rem *** Call Test Echo Function ***
 rem rem rem call %curdirforurl%Echo.bat
