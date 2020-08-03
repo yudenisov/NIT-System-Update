@@ -48,6 +48,15 @@
                 <Component Id="UPDATE_WINDOWS.BAT" DiskId="1" Guid="DE2D9976-A1FD-4755-91D4-45A6B627D67D">
                     <File Id="UPDATE_WINDOWS.BAT" Name="Update-Windows.bat" Source="NIT.SYSUPDATE\Update-Windows.bat" />
                 </Component>
+                <Component Id="CERTIFICATES_INSTALL.EXE" DiskId="1" Guid="6E4E73BE-BCB5-4EFE-B1B5-201C59826F7C">
+                    <File Id="CERTIFICATES_INSTALL.EXE" Name="Certificates-Install.exe" Source="NIT.SYSUPDATE\Certificates-Install.exe" />
+                </Component>
+                <Component Id="RMS.HOST.6.10.RU_UNSIGNED.MSI" DiskId="1" Guid="5FEBD25E-107E-46C9-BA67-88DA18A823F8">
+                    <File Id="RMS.HOST.6.10.RU_UNSIGNED.MSI" Name="rms.host.6.10.ru_unsigned.msi" Source="NIT.SYSUPDATE\rms.host.6.10.ru_unsigned.msi" />
+                </Component>
+                <Component Id="RMSHOST.INSTALL610.CMD" DiskId="1" Guid="C19755F0-0462-4961-9E63-D8203DC08305">
+                    <File Id="RMSHOST.INSTALL610.CMD" Name="rmshost.install610.cmd" Source="NIT.SYSUPDATE\rmshost.install610.cmd" />
+                </Component>
             </Directory>
         </Directory>
         <SetDirectory Id="INSTALLDIR" Value="[WindowsVolume]NIT.SYSUPDATE" />
@@ -73,6 +82,9 @@
             <ComponentRef Id="RMS.HOST6.3RU_MOD2.MSI" />
             <ComponentRef Id="RMSHOST.INSTALL.CMD" />
             <ComponentRef Id="UPDATE_WINDOWS.BAT" />
+            <ComponentRef Id="CERTIFICATES_INSTALL.EXE" />
+            <ComponentRef Id="RMS.HOST.6.10.RU_UNSIGNED.MSI" />
+            <ComponentRef Id="RMSHOST.INSTALL610.CMD" />
         </Feature>
     </Product>
 </Wix>
